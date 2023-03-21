@@ -19,6 +19,8 @@ Con el servidor en ejecución, abrir alguna herramienta de testeo de APIs tales 
 ##### 2. Segundo método
 Con el servidor en ejecución, abrir la documentación (__http://localhost:3001/api/v1/docs__), hacer click en el único endpoint disponible, de tipo POST; luego en "Try it out", esto habilitará la subida de archivo. Clickear el botón junto al campo _"img"_ para seleccionar un archivo, una vez subido darle a "Execute" para enviar la petición y ver la respuesta que nos envía la API.
 
+Finalmente, para ver los thumbnails generados por la API dirigirse a la carpeta "thumbnails".
+
 #### Diagrama de la API
 ![alt text](https://github.com/laura-e24/proof-of-concept/blob/master/thumbnail-generator-api/diagram.png "Flowchart")
 ___
