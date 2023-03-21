@@ -1,5 +1,24 @@
 # Code Challenge: Thumbnail Generator API
 
+## Instrucciones para utilizar la API
+Abrir una terminal en la carpeta actual y utilizar el comando ```npm install```. Esto instalará todas las dependencias necesarias para correr la API, luego para iniciarla utilizar ```npm run dev```. El servidor comenzará a operar en el puerto 3001. No se requieren variables de entorno.
+
+Para visualizar la documentación de la API ir a la ruta __http://localhost:3001/api/v1/docs__
+
+Para correr los tests que validan la API usar el comando ```npm test```.
+
+#### Probando la API:
+Con el servidor en ejecución, abrir alguna herramienta de testeo de APIs tales como Postman o ThunderClient, hacer una petición POST al endpoint **http://localhost:3001**; en el *body* de la misma se debe enviar un *Form* con un campo de tipo *File* (la forma de hacer esto varía según el programa que usemos), esto habilitará un botón para seleccionar una imagen de nuestra computadora. Seleccionamos una y podremos ver la respuesta que nos devuelve el servidor, pudiendo ser de cuatro tipos:
+
+##### 200: Todo salió correctamente
+##### 400: No se pudo procesar la imagen dado que excede el máximo de tamaño admitido
+##### 415: No se pudo procesar la imagen dado que el formato no es admitido por la API
+##### 500: Error inesperado del servidor
+
+#### Diagrama de la API
+![alt text](https://github.com/laura-e24/proof-of-concept/blob/master/thumbnail-generator-api/diagram.png "Flowchart")
+___
+
 ## Goal
 Build a simple API that generates thumbnails from a source image
 
