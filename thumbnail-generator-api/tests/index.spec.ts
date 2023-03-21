@@ -17,9 +17,6 @@ describe("1) Resize function", function() {
   const mockPath = `${process.cwd()}\\thumbnails\\mocking.png`
   
   before(async () => {
-    if (!filesystem.existsSync(`${process.cwd()}\\thumbnails`)) {
-      filesystem.mkdirSync(`${process.cwd()}\\thumbnails`);
-    }
     await resizeImage(120, 120, mockImg, "mock", "mocking")
   })
 
@@ -99,12 +96,7 @@ describe("3) API handles rejected requests", function () {
       await fs.unlink(path.join("./uploads", file));
     }
 
-    for (const file of await fs.readdir("./thumbnails")) {
-      await fs.unlink(path.join("./thumbnails", file));
-    }
-
     await fs.rmdir("./uploads")
-    await fs.rmdir("./thumbnails")
   });
 
   it("I) API rejects non-PNG and non-JPEG files", (done) => {
