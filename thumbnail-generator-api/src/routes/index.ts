@@ -7,6 +7,10 @@ const router = express.Router()
  * @swagger 
  *   components: 
  *     schemas:
+ *      ServerError:
+ *        type: string
+ *        example: 
+ *          Internal Server Error.
  *      FileExtensionError:
  *        type: string
  *        example: 
@@ -43,6 +47,13 @@ const router = express.Router()
  *        - application/json
  *        - text/plain
  *      responses:
+ *        500:
+ *          description: There's been an unexpected error
+ *          content:
+ *            text/plain:
+ *              schema:
+ *                type: string
+ *                $ref: '#/components/schemas/ServerError'
  *        400:
  *          description: Image could not be processed due to file size exceeds 11MB
  *          content:
