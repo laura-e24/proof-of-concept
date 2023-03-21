@@ -8,12 +8,18 @@ Para visualizar la documentación de la API ir a la ruta __http://localhost:3001
 Para correr los tests que validan la API usar el comando ```npm test```.
 
 #### Probando la API:
+##### 1. Primer método
 Con el servidor en ejecución, abrir alguna herramienta de testeo de APIs tales como Postman o ThunderClient, hacer una petición POST al endpoint **http://localhost:3001**; en el *body* de la misma se debe enviar un *Form* con un campo de tipo *File* (la forma de hacer esto varía según el programa que usemos), esto habilitará un botón para seleccionar una imagen de nuestra computadora. Seleccionamos una y podremos ver la respuesta que nos devuelve el servidor, pudiendo ser de cuatro tipos:
 
 ##### 200: Todo salió correctamente
 ##### 400: No se pudo procesar la imagen dado que excede el máximo de tamaño admitido
 ##### 415: No se pudo procesar la imagen dado que el formato no es admitido por la API
 ##### 500: Error inesperado del servidor
+
+##### 2. Segundo método
+Con el servidor en ejecución, abrir la documentación (__http://localhost:3001/api/v1/docs__), hacer click en el único endpoint disponible, de tipo POST; luego en "Try it out", esto habilitará la subida de archivo. Clickear el botón junto al campo _"img"_ para seleccionar un archivo, una vez subido darle a "Execute" para enviar la petición y ver la respuesta que nos envía la API.
+
+Finalmente, para ver los thumbnails generados por la API dirigirse a la carpeta "thumbnails".
 
 #### Diagrama de la API
 ![alt text](https://github.com/laura-e24/proof-of-concept/blob/master/thumbnail-generator-api/diagram.png "Flowchart")
